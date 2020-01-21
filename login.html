@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Login Page</title>
+        <link rel="stylesheet" href=".//CSS/loginStyle.css">
+        <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <form class="box" action="template_logged.html" method="POST">
+            <h1>Login</h1>
+            <input type="text" name="" placeholder="Username" id="text1"  required>
+            <input type="password" name="" placeholder="Password" id="text2" required>
+            <a href="forgotpassword.html">Forgot Password?</a>
+            <br></br>
+            <input type="submit" name="" placeholder="Login" onclick="javascript:validate()"/>
+        </form>
+        <a class="newuser" href="newuser.html">New Here? Sign Up</a>
+    </body>
+</html>
+
+
+
+<!-- 
+<form>
+    <input type="text" placeholder="Username" id="text1" /><br />
+    <input type="password" placeholder="Password" id="text2" /><br />
+    <input type="button" value="Login"  onclick="javascript:validate()" />
+</form> -->
+<script type="text/javascript">
+function validate()
+{
+    if(   document.getElementById("text1").value == ""
+       && document.getElementById("text2").value == "" )
+    {
+        alert( "Enter Valid Details" );
+        location.href="login.html";
+    }
+
+    else if(   document.getElementById("text1").value == "1bm18cs113"
+       && document.getElementById("text2").value == "s1s1s1" )
+    {
+        alert( "Student Logging In..." );
+        location.href="template_logged.html";
+    }
+    else if(   document.getElementById("text1").value == "teacher1"
+       && document.getElementById("text2").value == "t1t1t1" )
+    {
+        alert( "Teacher Logging In..." );
+        location.href="template_logged.html";
+    }
+
+    else 
+    {
+        alert( "Username Or Password is Incorrect" );
+        location.href="login.html";
+    }
+}
+</script>
